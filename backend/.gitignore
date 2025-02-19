@@ -1,0 +1,23 @@
+__pycache__/   # Python cache files
+*.pyc          # Compiled Python files
+.venv/         # Virtual environment
+.dockerignore  # Docker ignore file
+docker-compose.override.yml
+.terraform/    # Terraform state
+coverage/      # Test coverage reports
+workspace/     # Jenkins workspace
+*.log          # Log files
+.idea/         # IntelliJ project files
+.gradle/       # Gradle cache
+*.jar          # JAR files
+.env           # Environment variables
+*.pem          # SSL keys
+/dist/         # Distribution files
+/build/        # Compiled output
+/target/       # Maven/Gradle build output
+*.o            # Compiled object files
+*.class        # Java class files
+.DS_Store  # macOS Finder metadata
+Thumbs.db  # Windows thumbnail cache
+
+

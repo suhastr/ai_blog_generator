@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Blog App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* WebKit (Safari, older Chrome) */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.load {
+  width: 100px;
+  height: 100px;
+  margin: 110px auto 0;
+  border: solid 10px #8822aa;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  
+  /* Smooth transition */
+  transition: all 0.5s ease-in;
+
+  /* Animation */
+  animation: rotate 1s linear infinite;
+  -webkit-animation: rotate 1s linear infinite; /* WebKit support */
+}
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
+    <!-- Navbar -->
+
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div class="text-3xl font-bold">AI Blog Generator</div>
+        <ul class="flex space-x-4">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#" class="hover:underline">About</a></li>
+            <li><a href="#" class="hover:underline">Logout</a></li>
+        </ul>
+       
+    </nav>
+
+    <!-- Nav bar End-->
+     
+    <br>
+    <br>
+     <!-- Main -->
+     <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex-col">
+             <!-- Introduction Section -->
+            <div class="text-center">
+               
+            <h2 class="text-2xl font-semibold mb-4">Welcome to AI Blog Generator</h2>
+            <p class="text-gray-700">
+                Generates high quality blog articles from
+                youtube links using AI. Simply enter the youtube link below 
+                and let A I create content for you.
+            </p>
+            </div>
+            <br>
+            <!-- Youtube Section -->
+             <div>
+                <h2 class="text-xl mb-4 font-semibold">Enter Youtube Video Link </h2>
+                <div class="flex space-x-4">
+                    <input id="youtubeLink" type="url" placeholder="Paster Youtube Link..." class="flex-grow p-2 border border-blue-400 rounded-l-md">
+                    <button id="generateBlogButton" class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors">Generate</button>
+                </div>
+             </div>
+
+              <!-- Section for loading circle-->
+               <div style="display: none;"  id="loading-circle" class="load">
+
+               </div>
+
+
+             <!-- Generated Blog Display Section-->
+             <section class="mt-10 flex-grow">
+                <h2 class="text-xl mb-4 font-semibold">Generated Blog Article</h2>
+                <div id="blogContent" class="mt-2 text-gray-700 space-y-4">
+                    <!-- Section for loading circle-->
+                </div>
+             </section>
+        </div>
+     </div>
+     <footer class="text-center p-4 text-black mt-6">
+        Powered by <a href="">Suhas</a>
+     </footer>
+</body>
+</html>
